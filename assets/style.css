@@ -1,0 +1,308 @@
+/* Funnily enough, CSS does follow the ususal conventions. Somewhat, at least, cause // does not work.
+
+I put in 
+http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   
+Here, as advised by the tutorial doc. But I dont like it, so Ill make it one big comment.
+   
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+// (this was a comment by the author and needs to be put into the format again) HTML5 display-role reset for older browsers // 
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*/
+
+h3 { 
+    text-align: left;
+    letter-spacing: 0px;
+    font-size: 1.1em;
+    line-height: 0.75em;
+}
+
+label { 
+    text-align: left;
+    letter-spacing: 0px;
+    font-size: 1.1em;
+    line-height: 0.75em;
+}
+
+/* Button I found with the Navigation */
+
+button {
+    border-radius: 8px;
+    font-size: 15pt;
+    height: 50px;
+    width: 175px;
+  }
+  
+
+
+/* General */
+/* for Codepen version, plug in this picture below: url(https://steamuserimages-a.akamaihd.net/ugc/1022826054193984096/8EFA028EBDAA7165892E10AA5EAD34B63815605E/) */
+
+body {
+    background: rgb(27, 27, 27) url(Background-6.jpg) repeat-x;
+}
+
+body,
+input,
+textarea,
+select {
+    font-family: 'Crimson Text', serif;
+    font-size: 11pt;
+    line-height: 1em;
+}
+
+p {
+    font-size: 15pt;
+    line-height: 1em;
+}
+
+li {
+    text-align: center;
+    list-style: none;
+    font-size: 15pt;
+    line-height: 2em;
+}
+
+.loadoutImage {
+    border: 3px solid rgba(53, 53, 53, 0.637);
+	background: rgba(139, 139, 139, 0.637)
+}
+
+
+/* Header */
+
+#header {
+    padding: 2em 0em;
+    text-align: center;
+}
+
+.homepage #header {
+    padding: 5em 0em;
+}
+
+
+/* Title */
+
+#Title {
+    margin-bottom: 1em;
+}
+
+#Title h1 {
+    color: #FFF;
+}
+
+#Title h1 a {
+    display: block;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 900;
+    color: #323338;
+}
+
+#Title span {
+    display: block;
+    padding-top: 1em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    color: #8e8588;
+}
+
+
+/* Sections */
+
+#main {
+    padding: 1em 0em;
+    text-align: center;
+}
+
+.divider {
+    margin: 2em 0em 1em 0em;
+}
+
+#hobbies {
+    text-align: center;
+}
+
+#hobbies header h1 {
+    text-align: center;
+    letter-spacing: -1px;
+    font-size: 2em;
+}
+
+#aboutMe {
+    text-align: center;
+}
+
+#aboutMe header h1 {
+    letter-spacing: -1px;
+    font-size: 2em;
+}
+
+#aboutMe header h2 {
+    font-size: 15pt;
+}
+
+#home {
+    text-align: center;
+}
+
+#home header h3 {
+    letter-spacing: -1px;
+    font-size: 2em;
+}
+
+#photoAlbum {
+    text-align: center;
+}
+
+#photoAlbum header h1 {
+    text-align: center;
+    letter-spacing: -1px;
+    font-size: 2em;
+}
+
+#occupation {
+    text-align: center;
+}
+
+#occupation header h1 {
+    text-align: center;
+    letter-spacing: -1px;
+    font-size: 2em;
+}
+
+#occupation header h3 {
+    text-align: center;
+    font-size: 1em;
+    font-size: 15pt;
+    line-height: 1em;
+}
+
+
+/* Pretty Navigation I found, dont touch */
+
+
+
+#nav ul {
+    display: inline-block;
+    padding: 0em 2em;
+    border-radius: 40px;
+    background: #131313;
+}
+
+#nav>ul>li {
+    display: inline-block;
+}
+
+#nav>ul>li:last-child {
+    padding-right: 0;
+}
+
+#nav>ul>li>a,
+#nav>ul>li>span {
+    display: block;
+    padding: 1em 1em;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 0.75em;
+    outline: 0;
+    color: #7b7b7b;
+}
+
+#nav>ul>li>a:hover {
+    color: #FFF;
+}
+
+#nav li.active a {
+    color: #FFF;
+}
+
+
+/* Button I found with the Navigation, dont touch */
+
+.button {
+    position: relative;
+    display: inline-block;
+    margin-top: 1em;
+    padding: 1em 1em;
+    background: #1d1d1d;
+    border-radius: 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: #8e8588;
+    -moz-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+    -webkit-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+    -o-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+    -ms-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+    transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #141414;
+    color: #c2b6ba !important;
+}
+
+
+/* Footer */
+
+#footer {
+    position: bottom;
+    color: #8e8588;
+}
+
+#footer header h2 {
+    color: #8e8588;
+}
