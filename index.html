@@ -17,29 +17,51 @@
 <body>
   <!-- plug this url in below for Codepen Version https://cdn2.steamgriddb.com/file/sgdb-cdn/logo_thumb/8a1276c25f5efe85f0fc4020fbf5b4f8.png-->
   <a href="#" id="logo" class="image full"><img src="assets/Hunt_Logo_Textured_Black.png" width=300px></a>
-  <h1>Hunt: Randomizer</h1>
-  <h2>V 0.004</h2>
-  <h3></h3> <!-- h3[0] ------- -->
-  <h3></h3> <!-- h3[1] Current Bloodline Rank -->
-  <h3></h3> <!-- h3[2] placeholder for Ammo Checkbox --><input type="checkbox" id="ammoBox" name="ammoBox" value="Ammo" checked> <label for="ammoBox"> Include Ammo Types?</label><br>
-  <h3></h3> <!-- h3[3] placeholder for Quartermaster Checkbox --><input type="checkbox" id="quarterBox" name="quarterBox" value="Quartermaster" > <label for="quarterBox"> Quartermaster Trait selected?</label><br>
-  <h3></h3> <!-- h3[4] placeholder for Inefficient Checkbox --><input type="checkbox" id="inefficientBox" name="inefficientBox" value="Inefficient" > <label for="inefficientBox"> Allow inefficient Loadouts?</label><br>
-  <h3></h3> <!-- h3[5] placeholder for Chad Checkbox --> <input type="checkbox" id="chadBox" name="chadBox" value="chad" > <label for="chadBox"> Ban Chad Weapons?</label><br>
-  <h3></h3> <!-- h3[6] ------- -->
-  <h3></h3> <!-- h3[7] Main Weapon -->
-  <h3></h3> <!-- h3[8] Ammo Main Weapon -->
-  <h3></h3> <!-- h3[9] Side Weapon  -->
-  <h3></h3> <!-- h3[10] Ammo Side Weapon  -->     
-  <h3></h3> <!-- h3[11] Melee Weapon -->
-  <h3></h3> <!-- h3[12] Placeholder for Images --> <!-- <img id="mainGun" class="loadoutImage" src="" width=200px height=125px></img> <img id="sideArm" class="loadoutImage" src="" width=200px height=125px></img> <img id="meleeWeapon" class="loadoutImage" src="" width=200px height=125px></img> -->
-  <h3></h3> <!-- h3[13] ----------- -->
-  <h3></h3> <!-- h3[14] Loadout Cost-->
-  <h3></h3> <!-- h3[15] ----------- -->
-  <h3></h3> <!-- h3[16] placeholder for Bonus Features --> <input type="checkbox" id="bonusBox" name="bonusBox" value="bonus"> <label for="bonusBox"> Activate bonus features?</label>
+  <div class="row">
+    <div class="column">
+    <h1>Hunt: Randomizer</h1>
+    <h2>V 0.005</h2>
+    <h3></h3> <!-- h3[0] ------- -->
+    <h3></h3> <!-- h3[1] Current Bloodline Rank -->
+    <h3></h3> <!-- h3[2] placeholder for Ammo Checkbox --><input type="checkbox" id="ammoBox" name="ammoBox" value="Ammo" checked> <label for="ammoBox"> Include Ammo Types?</label><br>
+    <h3></h3> <!-- h3[3] placeholder for Quartermaster Checkbox --><input type="checkbox" id="quarterBox" name="quarterBox" value="Quartermaster" > <label for="quarterBox"> Quartermaster Trait selected?</label><br>
+    <h3></h3> <!-- h3[4] placeholder for Inefficient Checkbox --><input type="checkbox" id="inefficientBox" name="inefficientBox" value="Inefficient" > <label for="inefficientBox"> Allow inefficient Loadouts?</label><br>
+    <h3></h3> <!-- h3[5] placeholder for Chad Checkbox --> <input type="checkbox" id="chadBox" name="chadBox" value="chad" > <label for="chadBox"> Ban Chad Weapons?</label><br>
+    <h3></h3> <!-- h3[6] ------- -->
+    <h3></h3> <!-- h3[7] Main Weapon -->
+    <h3></h3> <!-- h3[8] Ammo Main Weapon -->
+    <h3></h3> <!-- h3[9] Side Weapon  -->
+    <h3></h3> <!-- h3[10] Ammo Side Weapon  -->     
+    <h3></h3> <!-- h3[11] Melee Weapon -->
+    <h3></h3> <!-- h3[12] Placeholder for Images --> <!-- <img id="mainGun" class="loadoutImage" src="" width=200px height=125px></img> <img id="sideArm" class="loadoutImage" src="" width=200px height=125px></img> <img id="meleeWeapon" class="loadoutImage" src="" width=200px height=125px></img> -->
+    <h3></h3> <!-- h3[13] ----------- -->
+    <h3></h3> <!-- h3[14] Loadout Cost-->
+    <h3></h3> <!-- h3[15] ----------- -->
+    <h3></h3> <!-- h3[16] placeholder for Bonus Features --> <input type="checkbox" id="bonusBox" name="bonusBox" value="bonus"> <label for="bonusBox"> Activate bonus features?</label>
+    <br>
+    <button id="randoButton" class="button"> Randomize!</button> <br>
+    <br>
+    </div>
+    <div class="column" hidden>
+      <div class="btn-group">
+      <h4>Bonus Features</h4><br>
+      <p>Kill Counter: 5 Kills -> 1 Reroll</p><br>
+      <button class="btn-group" id="minusKill">-</button><button class="btn-group" id="numberKill">0</button><button class="btn-group" id="plusKill">+</button>
+      <br><br><br><br><br><p>Extract Counter: 3 Extracts -> 1 Special Loadout</p><br>
+      <button class="btn-group" id="minusExtract">-</button><button class="btn-group" id="numberExtract">0</button><button class="btn-group" id="plusExtract">+</button>
+      <br><br><br><br><br><p>Death Counter: 3 Deaths -> Choose own Loadout</p><br>
+      <button class="btn-group" id="minusDeath">-</button><button class="btn-group" id="numberDeath">0</button><button class="btn-group" id="plusDeath">+</button>
+    </div>
+      
+    </div>
+  </div>
+
+  
+  
   <br>
-  
-  <button id="randoButton" class="button"> Randomize!</button> <br>
-  
+  <br>
+  <br>
+  <br>
 </body>
 <script type="text/javascript" src="script.js"></script>
 
@@ -48,7 +70,7 @@
 <footer>
   <div id="footer" class="footer">
       <br>&copy; distracTech
-      <br>Hunt: Randomizer Version 0.004 is based on Hunt: Showdown Version 1.5 that is currently on the Testserver.
+      <br>Hunt: Randomizer Version 0.005 is based on Hunt: Showdown Version 1.5 that is currently on the Testserver.
 
 </footer>
 

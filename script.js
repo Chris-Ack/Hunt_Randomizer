@@ -5,7 +5,7 @@
 
 // ToDo's for this version are:
 // - Buttons for KillCounter and Extractions (Deaths?)
-// - Randomly include special Loadouts
+// - Randomly include special Loadouts -> DONE
 // - bonus features attached to buttons
 
 
@@ -16,6 +16,9 @@ let quarterMaster = 0
 let allowBadLoadouts = 0
 let chadMode = 0
 let bonusMode = 0
+let numberKillVar = 0
+let numberExtractVar = 0
+let numberDeathVar = 0
 let randomMain = mainGun(weapons)
 let randomMainAmmo = mainGunAmmo(randomMain)
 let randomMainAmmoTwo = secondAmmoType(randomMain)
@@ -24,9 +27,39 @@ let randomSideAmmo = sideArmAmmo(randomSide)
 let randomSideAmmoTwo = secondAmmoType(randomSide)
 let randomMelee = meleeWeapon(melee)
 
+randomize()
+
+// Buttons //
+
 document.getElementById('randoButton').addEventListener('click', randomize)
 
-randomize()
+document.getElementById('minusKill').addEventListener('click', () => {numberKillVar -= 1; document.getElementById('numberKill').innerText = `${numberKillVar}`})
+document.getElementById('plusKill').addEventListener('click', () => {numberKillVar += 1; document.getElementById('numberKill').innerText = `${numberKillVar}`})
+document.getElementById('numberKill').addEventListener('click', () => {
+    if (numberKillVar >= 5) {
+        numberKillVar -= 5; 
+        document.getElementById('numberKill').innerText = `${numberKillVar}`;
+        randomize()}})
+
+document.getElementById('minusExtract').addEventListener('click', () => {numberExtractVar -= 1; document.getElementById('numberExtract').innerText = `${numberExtractVar}`})
+document.getElementById('plusExtract').addEventListener('click', () => {numberExtractVar += 1; document.getElementById('numberExtract').innerText = `${numberExtractVar}`})
+document.getElementById('numberExtract').addEventListener('click', () => {
+if (numberExtractVar >= 3) {
+    numberExtractVar -= 3; 
+    document.getElementById('numberExtract').innerText = `${numberExtractVar}`;
+    bonusGame(9)}})
+
+document.getElementById('minusDeath').addEventListener('click', () => {numberDeathVar -= 1; document.getElementById('numberDeath').innerText = `${numberDeathVar}`})
+document.getElementById('plusDeath').addEventListener('click', () => {numberDeathVar += 1; document.getElementById('numberDeath').innerText = `${numberDeathVar}`})
+document.getElementById('numberDeath').addEventListener('click', () => {
+if (numberDeathVar >= 3) {
+    numberDeathVar -= 3; 
+    document.body.getElementsByTagName("h3")[7].innerText = `Choose your own!`
+    document.body.getElementsByTagName("h3")[8].innerText = `Choose your own!`
+    document.body.getElementsByTagName("h3")[9].innerText = `Choose your own!`
+    document.body.getElementsByTagName("h3")[10].innerText = `Choose your own!`
+    document.body.getElementsByTagName("h3")[11].innerText = `Choose your own!`
+    }})
 
 // Checkbox Event Listeners //
 
@@ -56,8 +89,14 @@ chadBox.addEventListener('change', () => {
 
 let bonusBox = document.querySelector('input[value="bonus"]');
 bonusBox.addEventListener('change', () => {
-    if (bonusBox.checked) {bonusMode = 1; document.body.getElementsByTagName("h2")[0].innerText = `Bonus Mode Activated!`}
-    else {bonusMode = 0; document.body.getElementsByTagName("h2")[0].style.color = "black"; document.body.getElementsByTagName("h2")[0].innerText = `Version 0.004`}
+    if (bonusBox.checked) {
+        bonusMode = 1; 
+        document.body.getElementsByTagName("h2")[0].innerText = `Bonus Mode Activated!`
+        document.body.getElementsByTagName("div")[2].hidden = false}
+    else {bonusMode = 0; 
+        document.body.getElementsByTagName("h2")[0].style.color = "black"; 
+        document.body.getElementsByTagName("h2")[0].innerText = `Version 0.005`
+        document.body.getElementsByTagName("div")[2].hidden = true}
 })
 
 
@@ -72,7 +111,7 @@ function randomize() {
     randomSideAmmoTwo = secondAmmoType(randomSide)
     randomMelee = meleeWeapon(melee)
     if (chadMode === 1) {if (chadHelper() === true) {randomize()}}
-    if (bonusMode === 1) {bonusGame()}
+    if (bonusMode === 1) {bonusGame(100)}
     document.body.getElementsByTagName("h3")[0].innerText = `------------------------------------------------------------`
     document.body.getElementsByTagName("h3")[1].innerText = `Current Bloodline Rank: ${bloodlineRank}`
     document.body.getElementsByTagName("h3")[6].innerText = `------------------------------------------------------------`
@@ -277,8 +316,10 @@ function loadoutCostCalculator() {
     else if (ammoTypes === 1 && randomMainAmmoTwo === undefined && randomSideAmmoTwo === undefined) {return `Total cost of loadout: ${randomMain.Cost + randomMainAmmo.Cost + randomSide.Cost + randomSideAmmo.Cost + randomMelee.Cost}`}
 }
 
-function bonusGame() {
-    let randomNumber = _.random(0, 100)
+// Function for Bonus Loadouts
+
+function bonusGame(number) {
+    let randomNumber = _.random(0, number)
     let randomHelperArray = []
     if (randomNumber === 1) {
         randomMain = weapons[23]
@@ -334,7 +375,7 @@ function bonusGame() {
         
         randomMelee = meleeWeapon(melee)
         document.body.getElementsByTagName("h2")[0].style.color = "red";
-        document.body.getElementsByTagName("h2")[14].innerText = `Buechsenmanufactur VETTERLI`
+        document.body.getElementsByTagName("h2")[0].innerText = `Buechsenmanufactur VETTERLI`
     }
     else if (randomNumber === 5) {
         randomHelperArray.push(weapons[32], weapons[33], weapons[34], weapons[35]);

@@ -71,14 +71,14 @@ label {
 }
 
 /* Button I found with the Navigation */
-
+/*
 button {
     border-radius: 8px;
     font-size: 15pt;
     height: 50px;
     width: 175px;
   }
-  
+*/
 
 
 /* General */
@@ -98,8 +98,11 @@ select {
 }
 
 p {
-    font-size: 15pt;
-    line-height: 1em;
+    text-align: left;
+    font-size: 11pt;
+    line-height: 2em;
+    margin-top: -0.5em;
+    margin-bottom: -1em;
 }
 
 li {
@@ -113,6 +116,28 @@ li {
     border: 3px solid rgba(53, 53, 53, 0.637);
 	background: rgba(139, 139, 139, 0.637)
 }
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 47%;
+    padding: 15px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width:600px) {
+    .column {
+      width: 100%;
+    }
+  }
 
 
 /* Header */
@@ -294,6 +319,38 @@ li {
     background: #141414;
     color: #c2b6ba !important;
 }
+
+.btn-group {
+    background-color: #1d1d1d; 
+    border: 1px solid #8e8588;
+    color: #8e8588;
+    padding: 17px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    float: left;
+    }
+
+.groupbutton {
+    background-color: #1d1d1d; 
+    border: 1px solid #8e8588;
+    color: #8e8588;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+    
+  }
+    
+.groupbutton:hover {
+    background-color: #313131;
+  }
+
+
 
 
 /* Footer */
