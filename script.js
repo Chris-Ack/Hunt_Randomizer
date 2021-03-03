@@ -6,7 +6,7 @@
 // ToDo's for this version are:
 // - Buttons for KillCounter and Extractions (Deaths?)
 // - Randomly include special Loadouts -> DONE
-// - bonus features attached to buttons
+// - bonus features attached to buttons -> DONE
 
 
 
@@ -47,13 +47,20 @@ document.getElementById('numberExtract').addEventListener('click', () => {
 if (numberExtractVar >= 3) {
     numberExtractVar -= 3; 
     document.getElementById('numberExtract').innerText = `${numberExtractVar}`;
-    bonusGame(9)}})
+    bonusGame(9);
+    document.body.getElementsByTagName("h3")[7].innerText = `Main Weapon: ${randomMain.Name}`
+    document.body.getElementsByTagName("h3")[8].innerText = `${mainAmmoDisplay()}`
+    document.body.getElementsByTagName("h3")[9].innerText = `Sidearm: ${randomSide.Name}`
+    document.body.getElementsByTagName("h3")[10].innerText = `${sideArmAmmoDisplay()}`
+    document.body.getElementsByTagName("h3")[11].innerText = `Melee Weapon: ${randomMelee.Name}`
+    }})
 
 document.getElementById('minusDeath').addEventListener('click', () => {numberDeathVar -= 1; document.getElementById('numberDeath').innerText = `${numberDeathVar}`})
 document.getElementById('plusDeath').addEventListener('click', () => {numberDeathVar += 1; document.getElementById('numberDeath').innerText = `${numberDeathVar}`})
 document.getElementById('numberDeath').addEventListener('click', () => {
 if (numberDeathVar >= 3) {
-    numberDeathVar -= 3; 
+    numberDeathVar -= 3;
+    document.getElementById('numberDeath').innerText = `${numberExtractVar}`; 
     document.body.getElementsByTagName("h3")[7].innerText = `Choose your own!`
     document.body.getElementsByTagName("h3")[8].innerText = `Choose your own!`
     document.body.getElementsByTagName("h3")[9].innerText = `Choose your own!`
