@@ -1,7 +1,7 @@
 'use strict'
 // Please don't delete the 'use strict' line above
 
-// V0.004 - Bonus Features: Pure boredom has let me to try and start working on the bonus features
+// V0.06 - Bonus Features: Pure boredom has let me to try and start working on the bonus features
 
 // ToDo's for this version are:
 // - Buttons for KillCounter and Extractions (Deaths?)
