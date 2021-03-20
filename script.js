@@ -102,7 +102,7 @@ bonusBox.addEventListener('change', () => {
         document.body.getElementsByTagName("div")[2].hidden = false}
     else {bonusMode = 0; 
         document.body.getElementsByTagName("h2")[0].style.color = "black"; 
-        document.body.getElementsByTagName("h2")[0].innerText = `Version 0.005`
+        document.body.getElementsByTagName("h2")[0].innerText = `Version 0.5`
         document.body.getElementsByTagName("div")[2].hidden = true}
 })
 
