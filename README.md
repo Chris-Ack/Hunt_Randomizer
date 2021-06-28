@@ -26,6 +26,7 @@ This repository, however, is intended to stay as is - as a a reference point for
 ## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Images and graphics have been provided by Crytek, available in their fankit at <https://www.huntshowdown.com/fankit>.
 
 ## Contact
