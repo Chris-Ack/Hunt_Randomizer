@@ -1,34 +1,37 @@
-"# Hunt_Randomizer" 
+<p align="center">
+</p>    
+<p align="center">
+<img src="public/assets/Hunt_Logo_Textured_White.jpg">
+Hunt_Randomizer: A simple loadout randomizer for Hunt: Showdown.
+</p>  
 
-Randomizer for all Weapon Combos
-Incorporate Options:
-- Player Count
-- Allow less optimal loadouts (less than 4 slots used) DONE
-- Quartermaster (and maybe other key Traits like Silent Killer) DONE
-- "Special Builds" into the Randomizer (Medival, Quad Dolch, SneakyBeaky) -> in progress
-- Randomized Ammotypes DONE
-- Set max cost per loadout
-- (Weapon Max per Loadout? (as in: Max one Springfield, etc.)
-- Melee Weapons DONE
-- Consumables / Tools?
-- Legendary Hunters?
-- (Difficult: Prestiging?)
+## About The Project
 
-GUI - HTML
-- Buttons for:
-    - Player Count
-    - Randomize
-    - Qartermaster yes/no
-    - Max Cost?
-    - Special Loadouts
-- Weapon Pics
-- (later: Hunt screen lookalike?)
+This project is a simple tool to randomize the starting loadouts for the Videogame Hunt: Showdown by Crytek.
+It is currently updated for Version 1.5 of the game. You can find the current version deployed at:
+<https://hunt.distractech.com/>
 
-Point system?
-- one reroll every 10 kills (Kills have to be manually entered, though)
-- Roll for "special builds" every 3 extracts
-- Roll legendary hunter after XXX?
+## Advisory
 
-Test
+This was my very first project, and is very limited in scope & technologies used. I regularly use it as a basis for learning and applying newly learned technolgies.
+This repository, however, is intended to stay as is - as a a reference point for myself of where I started out.
 
+## Technologies used
 
+- HTML & CSS
+- Vanilla Javascript
+
+(very impressive, I know.)
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+Images and graphics have been provided by Crytek, available in their fankit at <https://www.huntshowdown.com/fankit>.
+
+## Contact
+
+Chris Ackermann
+<br />
+Github: [https://github.com/Chris-Ack](https://github.com/Chris-Ack)
+<br />
+LinkedIn: [https://www.linkedin.com/in/chris-ackermann/](https://www.linkedin.com/in/chris-ackermann/)
