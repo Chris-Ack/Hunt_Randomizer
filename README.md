@@ -1,10 +1,9 @@
-<p align="center">
-</p>    
-<p align="center">
+
+<div align="center">
 <img src="assets/Hunt_Logo_Textured_White.jpg" width=540px>
 
   Hunt_Randomizer: A simple loadout randomizer for Hunt: Showdown
-</p>  
+</div>  
 
 ## About The Project
 
